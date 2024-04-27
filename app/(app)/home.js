@@ -33,13 +33,11 @@ export default function Home() {
     setUsers(data);
   };
 
-  console.log(user);
-
   return (
     <View className='flex-1 bg-white'>
       <StatusBar style='light' />
       {users.length > 0 ? (
-        <ChatList users={users} />
+        <ChatList currentUser={user} users={users} />
       ) : (
         <View className='flex items-center' style={{ top: hp(40) }}>
           <ActivityIndicator size='large' />

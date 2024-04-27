@@ -5,7 +5,7 @@ export default function CustomKeyboardView({ children, inChat }) {
   let kbvConfig = {};
   let ScrollViewConfig = {};
   if (inChat) {
-    kbvConfig = { keyboardVerticalOffset: 60 };
+    kbvConfig = { keyboardVerticalOffset: 70 };
     ScrollViewConfig = { contentContainerStyle: { flex: 1 } };
   }
   return (
@@ -18,6 +18,7 @@ export default function CustomKeyboardView({ children, inChat }) {
         style={{ flex: 1 }}
         bounces={false}
         showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps='always'
         {...ScrollViewConfig}
       >
         {children}
